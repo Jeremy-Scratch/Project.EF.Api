@@ -37,6 +37,9 @@ namespace Project.EF.Api.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("character varying(150)");
 
+                    b.Property<int>("Weight")
+                        .HasColumnType("integer");
+
                     b.HasKey("CategoryId");
 
                     b.ToTable("Category", (string)null);
