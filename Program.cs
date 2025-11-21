@@ -4,7 +4,9 @@ using Project.EF.Api.EFContext;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<TareasContext>(x => x.UseInMemoryDatabase("TareasDB"));
+//builder.Services.AddDbContext<TareasContext>(x => x.UseInMemoryDatabase("TareasDB"));
+var connectionString = builder.Configuration.GetConnectionString("cnTareas");
+builder.Services.AddNpgsql<TareasContext>(connectionString);
 
 var app = builder.Build();
 
