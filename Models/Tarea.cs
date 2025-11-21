@@ -7,7 +7,7 @@ public class Tarea
 {
     //[Key]
     public Guid TareaId { get; set; }
-    [ForeignKey("CategoryId")]
+    //[ForeignKey("CategoryId")]
     public Guid CategoryId { get; set; }
     //[Required]
     //[MaxLength(200)]
@@ -17,7 +17,7 @@ public class Tarea
     public Priority TareaPriority { get; set; }
     public DateTime CreationDate { get; set; }
     public virtual Category? Category { get; set; }
-    [NotMapped] 
+    //[NotMapped] 
     public string? Resume{ get; set; }
 }
 

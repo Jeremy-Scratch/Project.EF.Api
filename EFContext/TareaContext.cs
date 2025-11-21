@@ -23,9 +23,12 @@ public class TareasContext: DbContext
         {
             tarea.ToTable("Task");
             tarea.HasKey(x => x.TareaId);
+            tarea.HasOne(x => x.Category).WithMany(x => x.Tareas).HasForeignKey(x => x.CategoryId);
             tarea.Property(x => x.Title).IsRequired().HasMaxLength(150);
             tarea.Property(x => x.Description).HasMaxLength(200);
-            tarea.Ignore(x=>x.Resume);
+            tarea.Ignore(x => x.Resume);
+            tarea.Property(x => x.TareaPriority);
+            tarea.Property(x => x.CreationDate);
         });
     }
 }
