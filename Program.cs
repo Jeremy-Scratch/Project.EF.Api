@@ -34,7 +34,7 @@ app.MapPost("/api/tareas", async ([FromServices] TareasContext dbContext, [FromB
     return Results.Ok();
 });
 
-app.MapPut("/api/tareas", async ([FromServices] TareasContext dbContext, [FromBody] Tarea tarea, [FromRoute] Guid Id) =>
+app.MapPut("/api/tareas/{Id}", async ([FromServices] TareasContext dbContext, [FromBody] Tarea tarea, [FromRoute] Guid Id) =>
 {
     var tareaToUpdate = dbContext.Tareas.Find(Id);
 

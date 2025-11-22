@@ -14,7 +14,15 @@ Content-Type:application/json
     "tareaPriority": 2
 } 
 
-PUT http://localhost:5046/api/tareas  HTTP/1.1
+###
+
+PUT http://localhost:5046/api/tareas/44997707-e8ed-498a-a427-ba1290e1f623  HTTP/1.1
 Content-Type:application/json 
 
-content
+{
+    "categoryId": "e29765db-6368-49b3-9a97-88f8be1ca89d",
+    "title": "Put the energy bill at my name",
+    "description": "I got the Apartment contract from the lawer office, i need to change because is not at my name",
+    "tareaPriority": 2 ,
+    "creationDate": "2025-11-22T05:26:01.740607Z"
+  }
