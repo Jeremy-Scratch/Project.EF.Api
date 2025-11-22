@@ -1,1 +1,20 @@
-http://localhost:5046/dbconection
+GET http://localhost:5046/dbconection
+
+####
+GET http://localhost:5046/api/tareas
+
+###
+POST http://localhost:5046/api/tareas 
+Content-Type:application/json 
+
+{
+    "categoryId": "e29765db-6368-49b3-9a97-88f8be1ca89d",
+    "title": "Put the energy bill at my name",
+    "description": null,
+    "tareaPriority": 2
+} 
+
+PUT http://localhost:5046/api/tareas  HTTP/1.1
+Content-Type:application/json 
+
+content
