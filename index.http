@@ -25,4 +25,7 @@ Content-Type:application/json
     "description": "I got the Apartment contract from the lawer office, i need to change because is not at my name",
     "tareaPriority": 2 ,
     "creationDate": "2025-11-22T05:26:01.740607Z"
-  }
+}
+
+###
+DELETE http://localhost:5046/api/tareas/44997707-e8ed-498a-a427-ba1290e1f623
